@@ -1,17 +1,17 @@
 {
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/ericbiewener/obsidian-lock-screen-plugin"
+		"url": "https://github.com/ryanliu6/obsidian-lock-screen-plugin"
 	},
 	"scripts": {
-		"start": "node esbuild.config.mjs",
+		"dev": "node esbuild.config.mjs",
 		"build": "rm -rf dist && tsc -noEmit -skipLibCheck && NODE_ENV=production node esbuild.config.mjs",
 		"format": "prettier --write --no-error-on-unmatched-pattern **/*.{ts,js,json,md}, *.{ts,js,json,md}",
 		"prepare": "husky install",
 		"release": "ts-node --project=./tsconfig.scripts.json ./scripts/create-release.ts"
 	},
 	"keywords": [],
-	"author": "Eric Biewener",
+	"author": "Ryan Liu",
 	"license": "MIT",
 	"version": "1.3.0",
 	"devDependencies": {
@@ -26,7 +26,7 @@
 		"husky": ">=6",
 		"inquirer": "8.2.0",
 		"lint-staged": ">=10",
-		"obsidian": "0.12.17",
+		"obsidian": "^1.5.7-1",
 		"open": "8.4.0",
 		"prettier": "2.5.1",
 		"prettier-plugin-organize-imports": "2.3.4",
